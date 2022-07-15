@@ -22,6 +22,11 @@ func init() {
 
 // WRITE YOUR CODE BELOW
 
+const (
+	sidorov = "Сидоров"
+	vasilev = "Васильев"
+)
+
 func TestPeople(t *testing.T) {
 
 	persons := People{
@@ -31,12 +36,12 @@ func TestPeople(t *testing.T) {
 			birthDay:  time.Date(1950, 6, 4, 0, 0, 0, 0, time.UTC),
 		},
 		{
-			firstName: "Сидоров",
+			firstName: sidorov,
 			lastName:  "Генадий",
 			birthDay:  time.Date(1967, 1, 2, 0, 0, 0, 0, time.UTC),
 		},
 		{
-			firstName: "Васильев",
+			firstName: vasilev,
 			lastName:  "Иван",
 			birthDay:  time.Date(1952, 7, 11, 0, 0, 0, 0, time.UTC),
 		},
@@ -64,14 +69,14 @@ func TestPeople(t *testing.T) {
 				persons[0],
 				persons[1],
 				{
-					firstName: "Васильев",
+					firstName: vasilev,
 					lastName:  "Иван",
 					birthDay:  time.Date(1967, 1, 2, 0, 0, 0, 0, time.UTC),
 				},
 			},
 			expected: People{
 				{
-					firstName: "Васильев",
+					firstName: vasilev,
 					lastName:  "Иван",
 					birthDay:  time.Date(1967, 1, 2, 0, 0, 0, 0, time.UTC),
 				},
@@ -86,7 +91,7 @@ func TestPeople(t *testing.T) {
 				persons[0],
 				persons[1],
 				{
-					firstName: "Сидоров",
+					firstName: sidorov,
 					lastName:  "Николай",
 					birthDay:  time.Date(1967, 1, 2, 0, 0, 0, 0, time.UTC),
 				},
@@ -94,7 +99,7 @@ func TestPeople(t *testing.T) {
 			expected: People{
 				persons[1],
 				{
-					firstName: "Сидоров",
+					firstName: sidorov,
 					lastName:  "Николай",
 					birthDay:  time.Date(1967, 1, 2, 0, 0, 0, 0, time.UTC),
 				},
